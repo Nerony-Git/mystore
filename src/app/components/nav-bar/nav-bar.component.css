@@ -7,6 +7,8 @@
   transition: all 0.5s;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #481fbc;
+  border-bottom: 1px solid #481fbc;
 }
 
 #header .logo h1 {
