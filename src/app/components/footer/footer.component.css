@@ -1,0 +1,21 @@
+.main-footer {
+    background: #fff;
+    border-top: 1px solid #dee2e6;
+    color: #869099;
+    padding: 1rem;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.nav-sidebar > .nav-item .float-right {
+  margin-top: 3px;
+}
+
+.nav-sidebar .nav-item > .nav-link > .float-right {
+  margin-top: -7px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}
