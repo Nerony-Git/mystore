@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AddToCartComponent } from './modals/add-to-cart/add-to-cart.component';
 import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
     FooterComponent,
     ProductsComponent,
     ProductsListComponent,
-    AddToCartComponent
+    AddToCartComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
