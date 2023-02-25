@@ -3,6 +3,7 @@
   --------------------------------------------------------------*/
   .more-services img {
     border-radius: 0;
+    height: 25vw;
   }
   
   .more-services .card {
