@@ -1,0 +1,13 @@
+.img-size {
+    height: 25vw;
+    object-fit: cover;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    background: #481fbc;
+    padding: 5px 5px;
+    color: #fff;
+    margin: 0;
+}
