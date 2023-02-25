@@ -10,7 +10,17 @@
         <p class="card-text">{{ product.description }}</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <form (ngSubmit)="addToCart()">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="input-group details d-flex align-items-center qty">
+              <span class="input-group-text">Qty</span>
+              <input name="qty" type="number" class="form-control" placeholder="Select Quantity" [(ngModel)]="quantity" #qty_ = "ngModel" min="1"/>
+            </div>
+            <div class="d-flex align-items-center">
+              <button type="submit" class="btn btn-primary" [disabled]="qty_.invalid"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
