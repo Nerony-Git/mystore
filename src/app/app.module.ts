@@ -10,6 +10,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AddToCartComponent } from './modals/add-to-cart/add-to-cart.component';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     FooterComponent,
     ProductsComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    AddToCartComponent
   ],
   imports: [
     BrowserModule,
