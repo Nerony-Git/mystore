@@ -1,0 +1,98 @@
+<!-- ===== Main Tag ===== -->
+<main id="main">
+    <section class="cart">
+        <div class="container" *ngIf="!cartProducts || !cartProducts.length">
+            <div class="section-title">
+                <h2> Your MyStore Basket is empty.</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <p> Check your Wishlist saved for later items below or <a routerLink = "/">continue shopping</a> </p>
+            </div>
+        </div>
+        <div class="container" *ngIf="cartProducts">
+            <div class="section-title">
+                <h2>Your Shopping Basket</h2>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <app-cart-item *ngFor="let cartProduct of cartProducts" [product]="cartProduct.product" [quantity]="cartProduct.quantity" (quantityEmitter)="changedQty($event)"></app-cart-item>
+            </div>
+
+            <div class="row" *ngIf="cartProducts !== undefined && cartProducts.length !== 0">
+                <div class="col-md-5">&nbsp;</div>
+                <div class="col-md-7">
+                    <div class=" input-group d-flex total">
+                    <span class="input-group-text"><i class="fa fa-calculator"></i> &nbsp;<b>Total</b></span>
+                    <input name="qty" type="string" class="form-control qty" placeholder="Total" value="{{ cart.totalCartPrice | currency: 'GBP' }}" disabled/>
+                    </div>
+                    <div> &nbsp; </div>
+                    <div>
+                        <form class="form-control" #checkoutForm="ngForm" (ngSubmit)="checkOut()">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" rowspan="2" class="alr">1</th>
+                                        <td rowspan="2"><b>Delivery Address</b></td>
+                                        <td>
+                                            <div class="input-group d-flex qty">
+                                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                                <input name="user" type="text" class="form-control" placeholder="Full Name" [(ngModel)]="name" #nameField="ngModel" required minlength="5"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group d-flex qty">
+                                                <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
+                                                <input name="address" type="text" class="form-control" placeholder="Your Address" [(ngModel)]="address" #addressField="ngModel" required minlength="15"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="alr" >2</th>
+                                        <td><b>Payment Method</b></td>
+                                        <td>
+                                            <div class="input-group d-flex qty">
+                                                <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+                                                <input name="credit" type="string" class="form-control" placeholder="Credit Card Number" [(ngModel)]="creditCard" #creditCardField="ngModel" required pattern="^[0-9]{16,}$" minlength="16" maxlength="16" (keypress)="($event.charCode >= 48 && $event.charCode < 58)"/>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"> &nbsp; </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" class="alr">
+                                            <button type="submit" class="btn btn-primary" [disabled]="checkoutForm.invalid"><i class="fa fa-cart-plus fa-lg mr-2"></i> Buy Now </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                        <div class="error">
+                        <div *ngIf="nameField.errors?.['required'] && (nameField.dirty || nameField.touched)" class="message">
+                            Your full name is required.
+                        </div>
+                        <div *ngIf="nameField.errors?.['minlength'] && (nameField.dirty || nameField.touched)" class="message">
+                            Your full name must be at least 6 characters long.
+                        </div>
+                        <div *ngIf="addressField.errors?.['required'] && (addressField.dirty || addressField.touched)" class="message">
+                            Your address is required.
+                        </div>
+                        <div *ngIf="addressField.errors?.['minlength'] && (addressField.dirty || addressField.touched)" class="message">
+                            Your address must be at least 12 characters long.
+                        </div>
+                        <div *ngIf="creditCardField.errors?.['required'] && (creditCardField.dirty || creditCardField.touched)" class="message">
+                            Your credit card number is required.
+                        </div>
+                        <div *ngIf="creditCardField.errors?.['minlength'] && (creditCardField.dirty || creditCardField.touched)" class="message">
+                            Your credit card number must be 16 digits long.
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
