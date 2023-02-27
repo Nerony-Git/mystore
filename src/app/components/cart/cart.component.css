@@ -79,7 +79,7 @@
   }
 
   .total {
-    width: 30%;
+    width: 40%;
     margin-left: auto;
     margin-right: 0;
     margin-top: 80px;
@@ -87,4 +87,5 @@
 
   .qty {
     font-weight: bold;
+    text-align-last: end;
   }

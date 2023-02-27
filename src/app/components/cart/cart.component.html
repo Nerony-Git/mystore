@@ -34,7 +34,7 @@
                                         <th scope="row" rowspan="2" class="alr">1</th>
                                         <td rowspan="2"><b>Delivery Address</b></td>
                                         <td>
-                                            <div class="input-group d-flex qty">
+                                            <div class="input-group d-flex">
                                                 <span class="input-group-text"><i class="fa fa-user"></i></span>
                                                 <input name="user" type="text" class="form-control" placeholder="Full Name" [(ngModel)]="name" #nameField="ngModel" required minlength="5"/>
                                             </div>
@@ -42,7 +42,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <div class="input-group d-flex qty">
+                                            <div class="input-group d-flex">
                                                 <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
                                                 <input name="address" type="text" class="form-control" placeholder="Your Address" [(ngModel)]="address" #addressField="ngModel" required minlength="15"/>
                                             </div>
@@ -52,7 +52,7 @@
                                         <th scope="row" class="alr" >2</th>
                                         <td><b>Payment Method</b></td>
                                         <td>
-                                            <div class="input-group d-flex qty">
+                                            <div class="input-group d-flex">
                                                 <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
                                                 <input name="credit" type="string" class="form-control" placeholder="Credit Card Number" [(ngModel)]="creditCard" #creditCardField="ngModel" required pattern="^[0-9]{16,}$" minlength="16" maxlength="16" (keypress)="($event.charCode >= 48 && $event.charCode < 58)"/>
 
