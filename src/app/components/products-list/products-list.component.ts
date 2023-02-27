@@ -7,8 +7,7 @@ import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.css'],
-  providers: [MdbModalService]
+  styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent {
   @Input() product!: Product;
