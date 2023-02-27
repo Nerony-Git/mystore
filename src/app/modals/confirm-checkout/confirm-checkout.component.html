@@ -1,0 +1,47 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">{{ title }}</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
+</div>
+<div class="modal-body">
+    <p>Continue to make purchase. <br/> <br/></p>
+    <p>Total Amount: <b>{{ amt | currency: 'GBP' }}</b></p>
+    <!-- <p><b>{{qty}}</b> piece{{qty === 1 ? '' : 's'}} of <b>{{item}}</b> added to your shopping basket.</p> -->
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>Total Amount</td>
+                <td>
+                    <div class="input-group d-flex">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        <input name="user" type="text" class="form-control" value="{{ amt | currency: 'GBP'}}" disabled />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>Delivery Details</b></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <div class="input-group d-flex">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        <input name="user" type="text" class="form-control" value="{{ name }}" disabled />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>
+                    <div class="input-group d-flex">
+                        <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
+                        <input name="user" type="text" class="form-control" value="{{ address }}" disabled />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalRef.close()"><i class="fa fa-arrow-left"></i>&nbsp; Back</button>
+    <button type="button" class="btn btn-primary" (click)="modalRef.close()"><a class="nav-link" routerLink="/cart"><i class="fa fa-cash-register"></i> &nbsp; Checkout</a></button>
+</div>
