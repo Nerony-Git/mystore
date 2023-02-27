@@ -1,0 +1,30 @@
+<div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <a routerLink="/product/{{ product.id }}">
+        <img src="{{ product.url }}" class="img-fluid rounded-start" alt="{{ product.name }}">
+        </a>
+      </div>
+      <div class="col-md-8 dis">
+        <div class="card-header mar_b">
+            <h5 class="card-title">{{ product.name }}</h5>
+        </div>
+        <div class="card-body">
+            <p>{{ product.description }}</p>
+          <p class="card-text"><b>{{ product.price | currency: 'GBP' }}</b></p>
+        </div>
+        <div class="card-footer mar_t">
+          <div class="d-flex justify-content-between align-items-center">
+              <div class="input-group d-flex align-items-center qty">
+              <span class="input-group-text"><b>Qty</b></span>
+              <input name="qty" type="number" class="form-control" placeholder="Select Quantity" [(ngModel)]="quantity" (ngModelChange)="changedQty($event)"/>
+              </div>
+              <div class=" input-group d-flex align-items-center qty">
+                  <span class="input-group-text"><b>Sub</b></span>
+                  <input name="qty" type="string" class="form-control" placeholder="Sub Total" value="{{ product.price * quantity | currency: 'GBP' }}" disabled/>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>

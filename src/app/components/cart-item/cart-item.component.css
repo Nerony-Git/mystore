@@ -1,0 +1,15 @@
+.qty {
+    width: 45%;
+}
+
+.dis {
+    display: grid;
+}
+
+.mar_t {
+    margin-top: auto;
+}
+
+.mar_b {
+    margin-bottom: auto;
+}
