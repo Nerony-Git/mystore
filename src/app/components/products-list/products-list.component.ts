@@ -22,12 +22,20 @@ export class ProductsListComponent {
 
   addToCart(): void {
     this.cartService.addProducts(this.product, this.quantity);
+    //alert(`We have put ${this.quantity} piece${this.quantity === 1 ? '' : 's'} of ${this.product.name} into your shopping cart.`);
+    this.modalRef = this.modalService.open(AddToCartComponent, {
+      data: { 
+        title: 'Added to Cart',
+        qty: this.quantity,
+        item: this.product.name
+      },
+    });
     this.quantity = 0;
   }
 
-  openModal() {
+  /*openModal() {
     this.modalRef = this.modalService.open(AddToCartComponent, {
       data: { title: 'Added to Cart'},
     });
-  }
+  }*/
 }

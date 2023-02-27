@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+  # Order
+  --------------------------------------------------------------*/
+
+  .order {
+    background: #ede9fc;
+  }
+  
+  .order .btn {
+    border-radius: 50px;
+    padding: 4px 30px 6px 30px;
+    border: 2px solid #fb058a;
+  }
+  
+  .order .btn:hover {
+    color: #fff;
+    background: #fb058a;
+  }
+  
+  /*--------------------------------------------------------------
+  # Sections General
+  --------------------------------------------------------------*/
+  section {
+    padding: 30px 0;
+  }
+  
+  .section-bg {
+    background-color: #f2f5f4;
+  }
+  
+  .section-title {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    /*text-transform: uppercase;*/
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #4b605c;
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+    color: #5f7c78;
+  }

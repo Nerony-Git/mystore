@@ -15,3 +15,8 @@
 .qty {
     width: 40%;
 }
+
+.tn {
+    text-decoration: none;
+    color: black;
+}

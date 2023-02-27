@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { AddToCartComponent } from './modals/add-to-cart/add-to-cart.component';
 import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 import { OrdersComponent } from './components/orders/orders.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { OrdersComponent } from './components/orders/orders.component';
     ProductsComponent,
     ProductsListComponent,
     AddToCartComponent,
-    OrdersComponent
+    OrdersComponent,
+    ProductDetailsComponent,
+    CartComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,

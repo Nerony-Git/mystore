@@ -8,6 +8,8 @@ import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
 })
 export class AddToCartComponent {
   title: string | null = null;
+  qty: number | null = null;
+  item: string | null = null;
 
   constructor(public modalRef: MdbModalRef<AddToCartComponent>){}
 

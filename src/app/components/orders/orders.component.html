@@ -1,1 +1,17 @@
-<p>orders works!</p>
+<!-- ===== Main Tag ===== -->
+<main id="main">
+    <section class="order">
+    <div class="container" *ngIf="orderDetails?.cart?.items !== null">
+        <div class="section-title">
+            <h2>Payment Completed</h2>
+            <p>Your order was Completed.</p>
+            <p>Thanks for purchasing from us</p>
+        </div>
+    </div>
+    <div class="container" *ngIf="!orderDetails || orderDetails?.cart?.items === null">
+        <div class="section-title">
+            <h2>Order</h2>
+        </div>
+    </div>
+    </section>
+</main>
