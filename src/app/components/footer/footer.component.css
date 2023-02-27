@@ -161,6 +161,8 @@
   height: 40px;
   border-radius: 4px;
   transition: all 0.4s;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .back-to-top i {
@@ -174,7 +176,7 @@
   color: #fff;
 }
 
-.back-to-top.active {
+.show-scrollTop {
   visibility: visible;
   opacity: 1;
 }

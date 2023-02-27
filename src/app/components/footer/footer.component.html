@@ -10,11 +10,10 @@
                     <p>
                         <strong>MyStore</strong> <br>
                         7c Suttons Lane <br>
-                        Hornchurch <br>
-                        London <br>
+                        Hornchurch London <br>
                         <strong>RM12 6RD</strong> <br><br>
                     </p>
-                    <div class="social-links mt-3">
+                    <div class="social-links">
                         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
@@ -36,9 +35,6 @@
                     <h4>Popular Links</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="../terms.php">Terms & Conditions</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="../privacy.php">Privacy Policy</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="../payment.php">Payments</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="../enquiry.php">Enquiry Forms</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="../about.php">About Us</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="../faqs.php">FAQs</a></li>
                     </ul>
@@ -56,9 +52,9 @@
         </div>
     </div>
     
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-arrow-up-short"></i>
-    </a>
+    <div (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="fa fa-arrow-up"></i>
+    </div>
 </footer>
 
 <!-- ===== End Footer Tag ===== -->
