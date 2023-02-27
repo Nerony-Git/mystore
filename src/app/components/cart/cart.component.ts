@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import CartProduct from 'src/app/models/cart-product';
 import Cart from 'src/app/models/cart';
+import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { ConfirmCheckoutComponent } from 'src/app/modals/confirm-checkout/confirm-checkout.component';
 
 @Component({
   selector: 'app-cart',
@@ -15,10 +17,12 @@ export class CartComponent implements OnInit {
   creditCard: string = "";
   cart!: Cart;
   cartProducts!: CartProduct[];
+  modalRef: MdbModalRef<ConfirmCheckoutComponent> | null = null;
 
   constructor(
     private cartService: CartService,
-    private router: Router
+    private router: Router,
+    private modalService: MdbModalService
   ){}
 
   updateList(): void {
@@ -39,13 +43,23 @@ export class CartComponent implements OnInit {
   }
 
   checkOut(): void {
-    this.cartService.setOrder(
-      this.name,
-      this.address,
-      this.creditCard
-    );
 
-    this.router.navigate(["/order"]);
+    this.modalRef = this.modalService.open(ConfirmCheckoutComponent, {
+      data: { 
+        title: 'Confirm Checkout',
+        amt: this.cart.totalCartPrice,
+        name: this.name,
+        address: this.address
+      },
+    });
+
+    // this.cartService.setOrder(
+    //   this.name,
+    //   this.address,
+    //   this.creditCard
+    // );
+
+    // this.router.navigate(["/order"]);
   }
 
   ngOnInit(): void {
