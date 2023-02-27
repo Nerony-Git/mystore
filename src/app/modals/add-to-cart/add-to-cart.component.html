@@ -1,4 +1,4 @@
-<!-- Modal -->
+<!-- Modal
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -14,4 +14,16 @@
         </div>
       </div>
     </div>
+  </div>
+-->
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">{{ title }}</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
+  </div>
+  <div class="modal-body">
+    <p><b>{{qty}}</b> piece{{qty === 1 ? '' : 's'}} of <b>{{item}}</b> added to your shopping basket.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalRef.close()"><i class="fa fa-cart-plus"></i>&nbsp; Continue Shopping</button>
+    <button type="button" class="btn btn-primary" (click)="modalRef.close()"><a class="nav-link" routerLink="/cart"><i class="fa fa-shopping-basket"></i> &nbsp; View Basket</a></button>
   </div>
