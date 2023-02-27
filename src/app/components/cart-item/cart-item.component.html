@@ -21,7 +21,7 @@
               </div>
               <div class=" input-group d-flex align-items-center qty">
                   <span class="input-group-text"><b>Sub</b></span>
-                  <input name="qty" type="string" class="form-control" placeholder="Sub Total" value="{{ product.price * quantity | currency: 'GBP' }}" disabled/>
+                  <input name="tot" id="tot" type="string" class="form-control" placeholder="Sub Total" value="{{ product.price * quantity | currency: 'GBP' }}" disabled/>
               </div>
           </div>
       </div>
