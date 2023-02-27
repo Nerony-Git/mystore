@@ -35,7 +35,8 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MdbModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
