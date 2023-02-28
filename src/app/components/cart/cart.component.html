@@ -27,7 +27,7 @@
                     </div>
                     <div> &nbsp; </div>
                     <div>
-                        <form class="form-control" #checkoutForm="ngForm" (ngSubmit)="checkOut()">
+                        <form class="form-control" #checkoutForm="ngForm" (ngSubmit)="confirmCheckOut()">
                             <table class="table">
                                 <tbody>
                                     <tr>
@@ -64,7 +64,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="3" class="alr">
-                                            <button type="submit" class="btn btn-primary" [disabled]="checkoutForm.invalid"><i class="fa fa-cart-plus fa-lg mr-2"></i> Buy Now </button>
+                                            <button type="submit" class="btn btn-primary" [disabled]="checkoutForm.invalid"><i class="fa fa-shopping-bag fa-lg mr-2"></i> &nbsp; Buy Now </button>
                                         </td>
                                     </tr>
                                 </tbody>

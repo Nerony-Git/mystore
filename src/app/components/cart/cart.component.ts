@@ -42,7 +42,7 @@ export class CartComponent implements OnInit {
     this.updateList();
   }
 
-  checkOut(): void {
+  confirmCheckOut(): void {
 
     this.modalRef = this.modalService.open(ConfirmCheckoutComponent, {
       data: { 
