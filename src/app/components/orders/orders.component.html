@@ -6,6 +6,24 @@
             <h2>Payment Completed</h2>
             <p>Your order was Completed.</p>
             <p>Thanks for purchasing from us</p>
+            <p><b>{{ orderDetails.cart.totalCartPrice | currency: "GBP"}}</b></p>
+            
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <app-cart-item *ngFor="let cartProduct of cartProducts" [product]="cartProduct.product" [quantity]="cartProduct.quantity"></app-cart-item>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">&nbsp;</div>
+                <div class="col-md-7">
+                    <div class=" input-group d-flex total">
+                    <span class="input-group-text"><i class="fa fa-calculator"></i> &nbsp;<b>Total</b></span>
+                    <input name="qty" type="string" class="form-control qty" placeholder="Total" value="{{ orderDetails.cart.totalCartPrice | currency: 'GBP' }}" disabled/>
+                    </div>
+                    <div> &nbsp; 
+                        {{ orderDetails.cart.items }}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container" *ngIf="!orderDetails || orderDetails?.cart?.items === null">
