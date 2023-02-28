@@ -4,6 +4,8 @@ import { Subscription } from 'rxjs';
 import Product from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 import { CartService } from 'src/app/services/cart.service';
+import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { AddToCartComponent } from 'src/app/modals/add-to-cart/add-to-cart.component';
 
 @Component({
   selector: 'app-product-details',
@@ -18,19 +20,29 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
   quantity: number =0;
   product_size: string = "";
   product_color: string = "";
+  modalRef: MdbModalRef<AddToCartComponent> | null = null;
 
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService,
-    private productService: ProductService
+    private productService: ProductService,
+    private modalService: MdbModalService
   ) {
     this.product = { id: 0, name: 'apple', price: 0, url: '', description: ''};
   }
 
   addProduct(): void {
-    this.cartService.addProducts(this.product, this.quantity);
 
-    alert(`${this.quantity} piece${this.quantity === 1 ? '' : 's'} of ${this.product.name} added to shopping cart.`);
+    this.cartService.addProducts(this.product, this.quantity);
+    this.modalRef = this.modalService.open(AddToCartComponent, {
+      data: { 
+        title: 'Added to Cart',
+        qty: this.quantity,
+        item: this.product.name
+      },
+    });
+    this.quantity = 0;
+
   }
 
   ngOnInit(): void {
