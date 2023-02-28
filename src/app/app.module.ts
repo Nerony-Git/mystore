@@ -17,6 +17,9 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { ConfirmCheckoutComponent } from './modals/confirm-checkout/confirm-checkout.component';
+import { FaqsComponent } from './components/faqs/faqs.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { TncsComponent } from './components/tncs/tncs.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ConfirmCheckoutComponent } from './modals/confirm-checkout/confirm-chec
     ProductDetailsComponent,
     CartComponent,
     CartItemComponent,
-    ConfirmCheckoutComponent
+    ConfirmCheckoutComponent,
+    FaqsComponent,
+    AboutUsComponent,
+    TncsComponent
   ],
   imports: [
     BrowserModule,
