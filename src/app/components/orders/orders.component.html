@@ -5,8 +5,7 @@
         <div class="section-title">
             <h2>Payment Completed</h2>
             <p>Your order was Completed.</p>
-            <p>Thanks for purchasing from us</p>
-            
+            <h3>Below is the details of your order.</h3>
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <app-ordered-items *ngFor="let orderedProduct of orderProducts" [product]="orderedProduct.product" [quantity]="orderedProduct.quantity"></app-ordered-items>
             </div>
@@ -18,6 +17,12 @@
                     <span class="input-group-text"><i class="fa fa-calculator"></i> &nbsp;<b>Total</b></span>
                     <input name="qty" type="string" class="form-control qty" placeholder="Total" value="{{ orderDetails.cart.totalCartPrice | currency: 'GBP' }}" disabled/>
                     </div>
+                </div>
+                <div>&nbsp;</div>
+                <div class="back">
+                    <p>Thanks for purchasing from us. &nbsp;<i class="fa fa-handshake-o"></i> &nbsp; &nbsp; </p>
+
+                    <button class="btn btn-primary"><a routerLink="/"><i class="fa fa-reply"></i>&nbsp; Back to Shop.</a></button>
                 </div>
             </div>
         </div>

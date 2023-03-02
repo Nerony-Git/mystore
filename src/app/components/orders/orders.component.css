@@ -47,6 +47,13 @@
     color: #5f7c78;
   }
 
+  .section-title h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px;
+    color: #5f7c78;
+  }
+
   .total {
     width: 40%;
     margin-left: auto;
@@ -57,4 +64,13 @@
   .qty {
     font-weight: bold;
     text-align-last: end;
+  }
+
+  .back .btn {
+    margin-top: 30px;
+  }
+
+  .back .btn a {
+    text-decoration: none;
+    color: white;
   }
