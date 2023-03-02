@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import CartProduct from 'src/app/models/cart-product';
 import Cart from 'src/app/models/cart';
@@ -21,7 +20,6 @@ export class CartComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    private router: Router,
     private modalService: MdbModalService
   ){}
 
@@ -52,14 +50,6 @@ export class CartComponent implements OnInit {
         address: this.address
       },
     });
-
-    // this.cartService.setOrder(
-    //   this.name,
-    //   this.address,
-    //   this.creditCard
-    // );
-
-    // this.router.navigate(["/order"]);
   }
 
   ngOnInit(): void {

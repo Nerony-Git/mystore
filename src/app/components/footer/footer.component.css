@@ -100,46 +100,10 @@
   #footer .footer-top .footer-links ul a:hover {
     color: #fb058a;
   }
-  
-  #footer .footer-top .footer-newsletter form {
-    margin-top: 30px;
-    background: #fff;
-    padding: 6px 10px;
-    position: relative;
-    border-radius: 4;
-  }
-  
-  #footer .footer-top .footer-newsletter form input[type=email] {
-    border: 0;
-    padding: 4px;
-    width: calc(100% - 110px);
-  }
-  
-  #footer .footer-top .footer-newsletter form input[type=submit] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border: 0;
-    background: none;
-    font-size: 16px;
-    padding: 0 20px;
-    background: #fb058a;
-    color: #fff;
-    transition: 0.3s;
-    border-radius: 4;
-  }
-  
+
   #footer .copyright {
     text-align: left;
     padding-top: 30px;
-  }
-  
-  #footer .credits {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 13px;
-    color: #fff;
   }
 
   .float-right {

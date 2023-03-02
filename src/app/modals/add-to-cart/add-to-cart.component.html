@@ -1,21 +1,4 @@
-<!-- Modal
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">{{ title }}</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <p>{{qty}} piece{{qty === 1 ? '' : 's'}} of {{item}} added to your shopping basket.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
--->
+<!--===== Add to Cart Modal =====-->
   <div class="modal-header">
     <h5 class="modal-title" id="exampleModalLabel">{{ title }}</h5>
     <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
@@ -27,3 +10,5 @@
     <button type="button" class="btn btn-secondary" (click)="modalRef.close()"><i class="fa fa-cart-plus"></i>&nbsp; Continue Shopping</button>
     <button type="button" class="btn btn-primary" (click)="modalRef.close()"><a class="nav-link" routerLink="/cart"><i class="fa fa-shopping-basket"></i> &nbsp; View Basket</a></button>
   </div>
+
+<!--===== End Add to Cart Modal =====-->

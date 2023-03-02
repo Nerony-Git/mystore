@@ -5,32 +5,6 @@
   .cart {
     background: #ede9fc;
   }
-
-  .cart img {
-    border-radius: 0;
-    height: 25vw;
-  }
-  
-  .cart .card {
-    border: 0;
-    text-align: ceneter;
-  }
-  
-  .cart .card-body {
-    -moz-text-align-last: center;
-    text-align-last: center;
-  }
-  
-  .cart .card-title a {
-    font-weight: 600;
-    font-size: 18px;
-    color: #334240;
-    transition: ease-in-out 0.3s;
-  }
-  
-  .cart .card-title a:hover {
-    color: #fb058a;
-  }
   
   .cart .btn {
     border-radius: 50px;
@@ -63,7 +37,6 @@
   .section-title h2 {
     font-size: 32px;
     font-weight: 700;
-    /*text-transform: uppercase;*/
     margin-bottom: 20px;
     padding-bottom: 0;
     color: #4b605c;
