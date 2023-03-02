@@ -1,0 +1,20 @@
+.qty {
+    width: 45%;
+    text-align-last: center;
+}
+
+.qty > #tot  {
+    text-align-last: end;
+}
+
+.dis {
+    display: grid;
+}
+
+.mar_t {
+    margin-top: auto;
+}
+
+.mar_b {
+    margin-bottom: auto;
+}

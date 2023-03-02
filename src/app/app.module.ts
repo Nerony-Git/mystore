@@ -20,6 +20,7 @@ import { ConfirmCheckoutComponent } from './modals/confirm-checkout/confirm-chec
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { TncsComponent } from './components/tncs/tncs.component';
+import { OrderedItemsComponent } from './components/ordered-items/ordered-items.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TncsComponent } from './components/tncs/tncs.component';
     ConfirmCheckoutComponent,
     FaqsComponent,
     AboutUsComponent,
-    TncsComponent
+    TncsComponent,
+    OrderedItemsComponent
   ],
   imports: [
     BrowserModule,
